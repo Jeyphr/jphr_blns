@@ -1,0 +1,198 @@
+{
+    "gameplay": 
+    {
+        "global":
+        {
+            "all_items_cost_multiplier": 1
+        },
+
+        "perksacola": 
+        {
+            "perk_purchase_limit": 8,
+            "perk_staminup_movement_speed_multiplier": 2,
+            "perk_staminup_stamina_recharge_multiplier": 2,
+            "perk_deadshot_headshot_damage_multiplier": 2
+        },
+
+        "powerups":
+        {
+            "max_powerups_per_round": 4,
+            "powerup_spawn_frequency_multiplier": 0,
+
+            "powerup_max_ammo":
+            {
+                "enabled": true,
+                "chance_to_allow_in_rotation": 0.25,
+                "disabled_before_round": 0,
+                "fills_magazine": true,
+                "toast": "Max Ammo!",
+                "show_toast": true,
+                "model": "models/pu/maxammo!.mdl",
+                "voiceover": "sounds/pu/maxammo.wav"
+            },
+
+            "powerup_instakill":
+            {
+                "enabled": true,
+                "chance_to_allow_in_rotation": 1,
+                "disabled_before_round": 0,
+                "duration": 30,
+                "toast": "Insta-Kill!",
+                "show_toast": false,
+                "model": "models/pu/instakill!.mdl",
+                "voiceover": "sounds/pu/insta_kill.wav"
+            },
+
+            "powerup_double_points":
+            {
+                "enabled": true,
+                "chance_to_allow_in_rotation": 1,
+                "disabled_before_round": 0,
+                "duration": 30,
+                "score_multiplier": 2,
+                "toast": "Double Points!",
+                "show_toast": false,
+                "model": "models/pu/x2!.mdl",
+                "voiceover": "sounds/pu/double_points.wav"
+            },
+
+            "powerup_carpenter":
+            {
+                "enabled": false
+            },
+
+            "powerup_nuke":
+            {
+                "enabled": true,
+                "chance_to_allow_in_rotation": 0.25,
+                "disabled_before_round": 0,
+                "score_awarded": 400,
+                "toast": "Ka-Boom!",
+                "show_toast": false,
+                "model": "models/pu/nuke!.mdl",
+                "voiceover": "sounds/pu/kaboom.wav",
+                "explosion_sfx": "sounds/pu/nuke.wav"
+            },
+
+            "powerup_free_perk":
+            {
+                "enabled": true,
+                "chance_to_allow_in_rotation": 1,
+                "disabled_before_round": 0,
+                "awarded_score_if_no_perk_obtained": 0,
+                "allowed_perksacola":
+                [
+                    "quickrevive",
+                    "speedcola",
+                    "doubletap",
+                    "phdflopper",
+                    "staminup",
+                    "deadshot",
+                    "mulekick"
+                ],
+                "toast": "Bottoms Up!",
+                "show_toast": true,
+                "model": "models/pu/perkbottle!.mdl",
+                "voiceover": ""
+            },
+
+            "powerup_bonus_points":
+            {
+                "enabled": true,
+                "chance_to_allow_in_rotation": 1,
+                "disabled_before_round": 0,
+                "score_awarded": 500,
+                "toast": "Blood Money!",
+                "show_toast": true,
+                "model": "models/pu/points!.mdl",
+                "voiceover": ""
+            },
+
+            "powerup_weapon_upgrade":
+            {
+                "enabled": true,
+                "chance_to_allow_in_rotation": 1,
+                "disabled_before_round": 0,
+                "awarded_score_if_no_upgrade_received": 0,
+                "toast": "Get Packed!",
+                "show_toast": true,
+                "model": "models/pu/pack!.mdl",
+                "voiceover": ""
+            }
+        },
+
+        "ai":
+        {
+            "score_system": "default",
+            "round_health_cap": 0,
+
+            "zombie":
+            {
+                "despawn_distance": 0,
+                "despawn_height": 0,
+                "walk_styles":
+                {
+                    "can_walk": false,
+                    "can_jog": false,
+                    "can_sprint": true,
+                    "can_super_sprint": false
+                }
+            }
+        },
+
+        "rounds":
+        {
+            "delay_between_rounds": 0,
+            "ai_spawn_delay_reduction_multiplier": 0
+
+        }
+    },
+
+    "interface":
+    {
+        "perksacola":
+        {
+            "position_style": "bo3",
+
+            "graphics":
+            {
+                "quickrevive":  "gfx/hud/jphr/blns/perks/revive",
+                "juggernog":    "gfx/hud/jphr/blns/perks/jug",
+                "speedcola":    "gfx/hud/jphr/blns/perks/speed",
+                "doubletap":    "gfx/hud/jphr/blns/perks/double",
+                "doubletap_2":  "gfx/hud/jphr/blns/perks/double2",
+                "staminup":     "gfx/hud/jphr/blns/perks/stamin",
+                "flopper":      "gfx/hud/jphr/blns/perks/flopper",
+                "deadshot":     "gfx/hud/jphr/blns/perks/dead",
+                "mulekick":     "gfx/hud/jphr/blns/perks/mule"
+            }
+        },
+
+        "rounds":
+        {
+            "position_style": "bottom_left",
+            "skip_intro": false,
+            "use_tally_marks_until_round": 0,
+            "color": [220, 220, 0]
+        },
+
+        "equipment":
+        {
+            "graphics":
+            {
+                "grenade":          "gfx/hud/jphr/blns/equipment/frag"
+            }
+        },
+
+        "score":
+        {
+            "position_style": "right",
+
+            "graphics":
+            {
+                "score_background_full":        "gfx/hud/jphr/blns/score/moneybackYlw",
+                "score_background_condensed":   "gfx/hud/jphr/blns/score/moneyback_condensedGrn"
+            }
+        }
+    }
+}
